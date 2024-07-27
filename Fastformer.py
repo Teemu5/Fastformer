@@ -15,11 +15,15 @@ except Exception as e:
     dataset_path = "/app/data/ag_news"
     kaggle_dataset = "amananandrai/ag-news-classification-dataset"
     subprocess.run(['python3', '../model/download_from_kaggle.py', '--dataset', kaggle_dataset, '--destination', dataset_path], check=True)
+<<<<<<< HEAD
     data_files = {
         'train': '/app/data/ag_news/train.csv',
         'test': '/app/data/ag_news/test.csv'
     }
     dataset = load_dataset('csv', data_files=data_files)
+=======
+    subprocess.run(['ls -l', dataset_path])
+>>>>>>> 76614801da012007e95cdefb31ebd0abdeb4518f
     if os.path.exists(dataset_path):
         print("Loading dataset from local path")
         dataset = load_dataset(dataset_path)
